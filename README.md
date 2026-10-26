@@ -28,4 +28,4 @@ The fun thing about collaging is that randomness is encouraged! Poetry is an acc
 - Database: MongoDB
 
 ### How to run project: 
-- Live link coming soon!
+- Diployed site: https://poetry-collage.onrender.com/ 
