@@ -1,0 +1,36 @@
+{
+  "name": "Poetry Collage",
+  "version": "1.0.0",
+  "description": "a poetry collage randomizer app",
+  "homepage": "https://github.com/priscilla-ruilova/poetry-Collage#readme",
+  "bugs": {
+    "url": "https://github.com/priscilla-ruilova/poetry-Collage/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priscilla-ruilova/poetry-Collage.git"
+  },
+  "license": "ISC",
+  "author": "Priscilla Ruilova",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "savage": "node --watch server.js"
+  },
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.14.2",
+    "bson": ">=1.0.5",
+    "dotenv": "^18.0.9",
+    "ejs": "^3.1.8",
+    "express": "^4.13.3",
+    "mongodb": "^3.3.4",
+    "mongoose": "^5.12.1",
+    "nodemon": "^3.1.14",
+    "port": "^0.8.1"
+  },
+  "devDependencies": {
+    "minimist": ">=1.2.2"
+  }
+}

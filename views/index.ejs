@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Poetry Collage</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <section class="hero">
+    <h1>Poetry Collage</h1>
+    <blockquote>
+      <p>“To elevate the soul, poetry is necessary.”</p>
+      <footer>— Edgar Allen Poe, <cite>The Poetic Principle</cite></footer>
+    </blockquote>
+    <p>Write a line, collaborate with others, see what we create. If you feel shy, make your name anonymous. Don't forget to hit the shuffle button!</p>
+  
+
+    <section class="columnsContainer">
+  
+      <!-- this is where we render lines of poetry from the database  -->
+      <ul class="lines">
+        <% for(var i=0; i<lines.length; i++) {%>
+          <li class="line">
+            <section class="leftLine">
+              <span class = "nameSpan"><%= lines[i].name %></span>
+              <span><%= lines[i].line %></span>
+            </section>
+            <section class="rightLine">
+              <button data-line-id="<%= lines[i]._id %>" class="remove">Remove line</button>
+              <button data-line-id="<%= lines[i]._id %>" class="editName">Edit name</button>
+            </section>
+            
+          </li>
+          <% } %>
+      </ul>
+
+      <!-- this is where we add to our form -->
+      <section class="formContainer">
+        <h2>Add your line</h2>
+        <form action="/lines" method="POST">
+          <input type="text" placeholder="your name or initials" name="name">
+          <input type="text" placeholder="write a line of poetry" maxlength="80" name="line">
+          <button type="submit">Add a line</button>
+        </form>
+
+        <button onclick="location.reload()">Shuffle</button>
+
+      </section>
+
+    </section>
+
+  </section>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
