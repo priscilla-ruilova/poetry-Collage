@@ -4,7 +4,6 @@ const express = require('express')
 const app = express()
 
 const configDB = require('./config/database.js');
-const port = process.env.PORT || 8000;
 const bodyParser = require('body-parser');
 const { ObjectID } = require('mongodb');
 const mongoose = require('mongoose');
